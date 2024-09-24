@@ -1,3 +1,76 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.colorIcon{
+    color:#9b27b0;
+}
+.colorIconSecondary{
+    color:#f6a021;
+}
+.bg-banner{
+    background-image: url('banner.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+::selection {
+    background-color: blueviolet;
+    color: white;
+}
+.loginButton{
+    border: 2px solid #e2e9ee    ;
+    border-radius: 4px;
+}
+
+.mapdiv polygon {
+    fill: #9b27b0;
+    stroke: #f6a021;
+    stroke-width: 2px;
+    transition: fill 0.3s;
+}
+.mapdiv{
+    width: 80%;
+    align-items: center;
+}
+body{
+    overflow-x: hidden;
+}
+.left-22{
+    left: 5.4rem;
+}
+.text-xx{
+    font-size: 1.04rem /* 20px */;
+    line-height: 1.75rem
+}
+.w-88{
+ 
+}
+
+body {
+    --sb-track-color: #b3bdc1;
+    --sb-thumb-color: #f6a021;
+    --sb-size: 12px;
+  }
+  
+  body::-webkit-scrollbar {
+    width: var(--sb-size)
+  }
+  
+  body::-webkit-scrollbar-track {
+    background: var(--sb-track-color);
+    border-radius: 11px;
+  }
+  
+  body::-webkit-scrollbar-thumb {
+    background: var(--sb-thumb-color);
+    border-radius: 11px;
+    
+  }
+  
+  @supports not selector(::-webkit-scrollbar) {
+    body {
+      scrollbar-color: var(--sb-thumb-color)
+                       var(--sb-track-color);
+    }
+  }

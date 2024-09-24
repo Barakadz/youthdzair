@@ -1,0 +1,48 @@
+import Link from "next/link";
+import Image from "next/image";
+import ProfileCard from "./ProfileCard";
+import CompleteProfile from "./CompleteProfil";
+ 
+const LeftMenu = ( { type }: { type?: String }) => {
+  return (
+    <div className=" flex flex-col gap-6">
+      {type ? (
+        <>
+    <div className="p-4 bg-white rounded-lg shadow-md text-sm flex flex-col gap-6">
+      <p>Les inputes de Filter :</p>
+</div>
+    </>
+      ) : null}
+    <CompleteProfile/>
+    <ProfileCard /> 
+      <div className="p-4 bg-white rounded-lg shadow-md text-sm text-gray-500 flex flex-col gap-2">
+        <Link
+          href="/"
+          className="flex items-center gap-4 p-2 rounded-lg hover:bg-slate-100"
+        >
+          <Image src="/activity.png" alt="" width={20} height={20} />
+          <span>My Activities</span>
+        </Link>
+        <hr className="border-t-1 border-gray-50 w-36 self-center" />
+        <Link
+          href="/"
+          className="flex items-center gap-4 p-2 rounded-lg hover:bg-slate-100"
+        >
+          <Image src="/lists.png" alt="" width={20} height={20} />
+          <span>Explore</span>
+        </Link>
+        <hr className="border-t-1 border-gray-50 w-36 self-center" />
+        <Link
+          href="/"
+          className="flex items-center gap-4 p-2 rounded-lg hover:bg-slate-100"
+        >
+          <Image src="/work.png" alt="" width={20} height={20} />
+          <span>Opportunity</span>
+        </Link>
+        
+      </div>
+     </div>
+  );
+};
+
+export default LeftMenu;
